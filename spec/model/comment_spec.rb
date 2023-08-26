@@ -18,7 +18,7 @@ RSpec.describe Comment, type: :model do
   end
 
 
-describe '#update_comment_counter' do
+  describe '#update_comment_counter' do
     it 'increments the post comments_counter by 1' do
       user = User.create!(name: 'User Name', posts_counter: 0)
       post = Post.create!(author: user, title: 'Post Title', comments_counter: 0, likes_counter: 0)
