@@ -152,4 +152,4 @@ Gratitude to all contributors and educators for the invaluable resources.
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#read
+<p align="right">(<a href="#read)
