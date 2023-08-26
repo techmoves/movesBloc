@@ -17,7 +17,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 # 📖 Ruby and Rails Project - MovesBlock
@@ -106,10 +105,6 @@ rails server
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add more features
-- Add good UI
-- Add full flow
-
 - [X] **[ Creating a data model ]**
 - [X] **[ Processing data in models..]**
 - [X] **[ Setup and controllers.]**
@@ -155,6 +150,6 @@ Gratitude to all contributors and educators for the invaluable resources.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#read
+<p align="right">(<a href="#read)
