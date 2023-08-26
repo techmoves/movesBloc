@@ -105,10 +105,6 @@ rails server
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add more features
-- Add good UI
-- Add full flow
-
 - [X] **[ Creating a data model ]**
 - [X] **[ Processing data in models..]**
 - [X] **[ Setup and controllers.]**
