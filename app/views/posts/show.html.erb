@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
+<div class='main-div'>
+    <div class='div'>
+            <p>Post #<%= @posts.id%> By <%= @posts.author.name %></p>
+            <p>
+                 <%= @posts.title %>
+            </p>
+            <p><%= @posts.text %></p>
+            <p>
+                <span>comments: <%= @posts.comments_counter %></span>, 
+                <span>Likes: <%= @posts.likes_counter %> </span>
+            </p>
+    </div>
 
-  <body>
-    <h1>Here is the index page of your posts for a given user</h1>
-  </body>
-</html>
+    <ul>
+          <div>
+            <% @comment.each do |item| %>
+               <p>User : <%= item.author.name %></p>
+               <p><%= item.text %></p>
+             <% end %>
+          </div>
+    </ul>
+</div>

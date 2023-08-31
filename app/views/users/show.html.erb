@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
+<div class='main-div'>
+  <div class="show-container"> 
+    <img src="<%= @user.photo %>" alt="Profile photo" />
+    <div>
+      <p><%= @user.name %></p>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+    </div>
+  </div>
+</div>
 
-  <body>
-    <h1>Here is a index page for a given user</h1>
-  </body>
-</html>
+    <div>
+        <p>Bio</p>
+        <p><h3><%= @users.bio %></h3></p>
+    </div>
+
+    <ul>
+        <% @users.recent_posts.each do |user| %>
+          <li>
+            <p>Post #<%= user.id%></p>
+            <p><%= user.title %></p>
+            <p><%= user.text %></p>
+            <p>
+                <span>comments: <%= user.comments_counter %></span>, 
+                <span>Likes: <%= user.likes_counter %> </span>
+                <%=@post%>
+            </p>
+          </li>
+        <% end %>
+    </ul>
+
+    <button>
+        <%= link_to 'See all posts' , "#{@users.id}/posts" %>
+    </button>
+</div>
