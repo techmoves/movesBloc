@@ -1,12 +1,16 @@
+<!DOCTYPE html>    
+    <!-- Other meta tags and title -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Other CSS or style tags can also be added here -->
+  <body>
 <div class='main-div'>
-  <div class="show-container"> 
-    <img src="<%= @user.photo %>" alt="Profile photo" />
-    <div>
-      <p><%= @user.name %></p>
-      <p>Number of posts: <%= @user.posts_counter %></p>
+    <div class="show-container"> 
+         <img src=<%=@users.photo%> alt='Profile photo' />
+        <div>
+           <p> <%= @users.name %></p>
+           <p>Number of posts: <%= @users.posts_counter %> </p>
+        </div>
     </div>
-  </div>
-</div>
 
     <div>
         <p>Bio</p>
@@ -27,8 +31,13 @@
           </li>
         <% end %>
     </ul>
+    <p class='new-post'> <%= link_to 'New post' , "/users/#{@users.id}/posts/new" %></p>
 
     <button>
         <%= link_to 'See all posts' , "#{@users.id}/posts" %>
     </button>
 </div>
+
+</body>
+  
+</html>

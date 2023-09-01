@@ -1,12 +1,11 @@
 <div class="container">
     <ul>
-        <%@users.each do |user| %>
+        <% @users.each do |user| %>
           <li>
             <div>
-                <img src=<%=user.photo%> alt='Profile' class = 'cover-img'  />
+                <img src=<%= user.photo %> alt="profile photo" />
                 <div >
-                     
-                    <p> <%= link_to user.name , user_path(user.id) %></p>
+                    <p><%= link_to user.name , user_path(user.id) %></p>
                     <p>Number of posts: <%= user.posts_counter%></p>
                 </div>
             </div>
