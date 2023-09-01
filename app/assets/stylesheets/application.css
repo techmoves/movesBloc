@@ -91,6 +91,13 @@ body {
   grid-template-columns: 100px auto;
 }
 
+button {
+  font-size: larger;
+  font-weight: 700;
+  font-style: oblique;
+  background-color:aquamarine;
+}
+
 .show-container img {
   width: 100px;
 }
