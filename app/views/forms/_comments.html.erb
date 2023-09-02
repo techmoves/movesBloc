@@ -1,5 +1,5 @@
-<%= form_with(model: [locals[:comment], locals[:comment].current_user.comments.build],
-              url: user_post_comments_path(locals[:comment].current_user, locals[:post_id])) do |form| %>
-  <%= form.text_area :text, size: "80x5", placeholder: 'Type your comments here!' %>
-  <%= form.submit 'Publish', size: "40x5", class: 'publish-button' %>
-<% end %>
+<%= form_with( model: locals[:comment].current_user.comments , 
+url: "/users/#{locals[:comment].current_user.id}/posts/#{locals[:post_id]}/comments") do |form| %>
+  <%= form.text_area :text , size:"80*5" , placeholder: 'Type your text here!'%>
+  <%= form.submit :Publish , size:"40*5", class: "publish-button" %>
+<%end%>

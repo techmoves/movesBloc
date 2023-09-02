@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @user = self
+    @current_user = current_user
   end
 
   def show
