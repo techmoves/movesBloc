@@ -1,1 +1,35 @@
-        <h1> Here is the index page of your posts for a given user</h1>
+<div class='post-div'>
+    <div class="show-container"> 
+         <img src=<%=@posts.photo%> alt='Profile' class = 'cover-img'  />
+        <div>
+           <p> <%= @posts.name %></h3></p>
+           <p>Number of posts: <%= @posts.posts_counter %> </p>
+        </div>
+    </div>
+    
+
+    <ul>
+        <% @posts.posts.each do |post| %>
+          <li class='post'>
+            <p>Post #<%= post.id%></p>
+            <p>
+                 <%= link_to post.title , "posts/#{post.id}" %>
+            </p>
+            <p><%= post.text %></p>
+            <p>
+                <span>comments: <%= post.comments_counter %></span>, 
+                <span>Likes: <%= post.likes_counter %> </span>
+            </p>
+          </li>
+          <div>
+            <% post.recent_comments.each do |post| %>
+               <p>User : <%= post.author.name %></p>
+               <p><%= post.text %></p>
+             <% end %>
+          </div>
+        <% end %>
+    </ul>
+    <button>
+        <%= link_to 'Pagination' , "/users/#{@posts.id}" %>
+    </button>
+</div>
