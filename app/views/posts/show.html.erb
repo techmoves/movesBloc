@@ -8,15 +8,21 @@
       <span>Likes: <%= @user.likes_counter %></span>
     </p>
   </div>
-
+  <ul>
   <div>
-    <!-- Display comments -->
     <% @user.comments.each do |comment| %>
       <p>User : <%= comment.author.name %></p>
       <p><%= comment.text %></p>
     <% end %>
-  </div>
-</div>
-
+      <div class='likes-coments'>
+                <P>
+                  <%= link_to 'Add a comment' , "/users/#{@posts.author.id}/posts/#{@posts.id}/comments/new" %>
+                </P>
+                <P>
+                  <%= link_to 'Like' , "/users/#{@posts.author.id}/posts/#{@posts.id}/likes/" %>
+                </P>
+      </div>
+    </div>
+  </ul>
 </div>
 
