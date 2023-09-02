@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
-  def index
-    puts
-    redirect_to "/users/#{params['user_id']}/posts/#{params['post_id']}"
-  end
+  def index; end
 
   def new
     @comment = self
