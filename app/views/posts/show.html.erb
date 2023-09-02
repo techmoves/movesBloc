@@ -14,14 +14,14 @@
       <p>User : <%= comment.author.name %></p>
       <p><%= comment.text %></p>
     <% end %>
-      <div class='likes-coments'>
+        <div class='likes-comments'>
                 <P>
                   <%= link_to 'Add a comment' , "/users/#{@posts.author.id}/posts/#{@posts.id}/comments/new" %>
                 </P>
                 <P>
                   <%= link_to 'Like' , "/users/#{@posts.author.id}/posts/#{@posts.id}/likes/" %>
                 </P>
-      </div>
+        </div>
     </div>
   </ul>
 </div>

@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     @user = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
     @comment = Comment.where(post_id: @posts)
     @comment = Comment.where(author_id: @user.id)
+    @posts = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
   end
 
   def create
