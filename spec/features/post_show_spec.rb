@@ -55,4 +55,4 @@ RSpec.feature 'Post show page', type: :feature do
   end
 end
 
-#it done and passed
+# it done and passed
