@@ -1,1 +1,3 @@
-<h1>new posts</h1>
+<div class='form'>
+  <%= render "forms/comments", locals: { comment: @comment, post_id: params['post_id'] } %>
+</div>

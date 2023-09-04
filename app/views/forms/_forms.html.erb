@@ -1,0 +1,5 @@
+<%= form_with( model: locals[:posts].current_user.posts , url: "/users/#{locals[:posts].current_user.id}/posts") do |form| %>
+  <%= form.text_field :title , placeholder: 'Title' , size:"50*5", class: "publish-button new" %>
+  <%= form.text_area :text , size:"90*10" , placeholder: 'comment here!!!'%>
+  <%= form.submit :Publish , size:"40*5", class: "publish-button new"%>
+<%end%>
