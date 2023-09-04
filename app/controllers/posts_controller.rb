@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-     @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
+    @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
   end
 
   def new
@@ -13,7 +13,6 @@ class PostsController < ApplicationController
     @comment = Comment.includes(:author).where(post_id: @posts)
 
     @posts = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
-    
   end
 
   def create
