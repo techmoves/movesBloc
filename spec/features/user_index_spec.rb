@@ -33,6 +33,5 @@ RSpec.feature 'User index page', type: :feature do
     expect(page).to have_content('Number of posts: 3')
     expect(page).to have_content('Number of posts: 0')
   end
-
 end
-#it done and passed
+# it done and passed

@@ -29,7 +29,7 @@ RSpec.feature 'User Show page', type: :feature do
   before do
     # Creating the user
     @user = User.create(
-      name: 'Tumaini Maganiko',
+      name: 'Phelelani',
       photo: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=800',
       bio: 'I am a great programmer',
       posts_counter: 0
