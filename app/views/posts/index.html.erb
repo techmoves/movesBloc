@@ -19,6 +19,9 @@
             <p>
                 <span>comments: <%= post.comments_counter %></span>, 
                 <span>Likes: <%= post.likes_counter %> </span>
+                <% if can?(:destroy, comment) %>
+          <%= button_to 'Delete Comment', user_post_comment_path(@user, post, comment), method: :delete, class: "delete-btn" %>
+        <% end %>
             </p>
           </li>
           <div>

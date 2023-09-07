@@ -34,22 +34,7 @@ class PostsController < ApplicationController
         format.html { render :new }
       end
     end
-     def destroy
-      @post = Post.find(params[:id])
-      authorize! :destroy, @post
 
-      if @post.destroy
-        flash[:success] = 'Post deleted successfully.'
-      else
-        flash[:error] = "You don't have permission to delete this post."
-      end
-    end
-    redirect_to root_path
-  end
-
-  private
-
-  def post_params
-    params.require(:post).permit(:title, :text)
+    private
   end
 end
