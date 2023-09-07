@@ -146,14 +146,14 @@ button {
 
 .forget-pass {
   text-align: center;
+  display: none;
 }
-
 
 .field {
   align-items: center;
 }
 
-.log{
+.log {
   display: flex;
   flex-direction: column;
   align-items: center;
