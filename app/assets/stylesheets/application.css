@@ -145,7 +145,10 @@ button {
 }
 
 .forget-pass {
-  text-align: center;
+  display: none;
+}
+
+h2 .forget-pass {
   display: none;
 }
 
@@ -175,10 +178,6 @@ button {
   margin: 10px auto;
 }
 
-.actions:hover {
-  background-color: black;
-}
-
 .log-input {
   width: 400px;
   padding: 10px 20px;
@@ -189,4 +188,8 @@ button {
   cursor: pointer;
   display: block;
   margin: 10px auto;
+}
+
+.up {
+  display: none;
 }
