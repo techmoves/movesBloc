@@ -178,3 +178,15 @@ button {
 .actions:hover {
   background-color: black;
 }
+
+.log-input {
+  width: 400px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #010101;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}
