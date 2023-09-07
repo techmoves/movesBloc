@@ -1,7 +1,17 @@
 class PostsController < ApplicationController
+
+  load_and_authorize_resource
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: "Post was successfully deleted."
+  end
+
   def index
     @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
   end
+
+  
 
   def new
     @user = self
