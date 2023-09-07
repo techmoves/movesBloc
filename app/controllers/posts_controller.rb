@@ -1,17 +1,16 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
 
   load_and_authorize_resource
 
   def destroy
     @post.destroy
-    redirect_to posts_path, notice: "Post was successfully deleted."
+    redirect_to posts_path, notice: 'Post was successfully deleted.'
   end
 
   def index
     @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
   end
-
-  
 
   def new
     @user = self
@@ -35,6 +34,17 @@ class PostsController < ApplicationController
         format.html { render :new }
       end
     end
+     def destroy
+      @post = Post.find(params[:id])
+      authorize! :destroy, @post
+
+      if @post.destroy
+        flash[:success] = 'Post deleted successfully.'
+      else
+        flash[:error] = "You don't have permission to delete this post."
+      end
+    end
+    redirect_to root_path
   end
 
   private
