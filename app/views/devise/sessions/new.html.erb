@@ -1,10 +1,10 @@
-<h2 class='forget-pass'>Log in</h2>
+<h2 class="forget-pass">Log in</h2>
 
 <div class="log">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :UserName %><br />
-    <%= f.email_field :email, autofocus: true,  autocomplete: "email",placeholder: 'username',class:"log-input" %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true,  autocomplete: "email",placeholder: 'email',class:"log-input" %>
   </div>
 
   <div class="field">
@@ -14,7 +14,7 @@
  
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in",class:"log-input" %>
   </div>
 <% end %>
 
