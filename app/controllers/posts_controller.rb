@@ -1,7 +1,14 @@
 class PostsController < ApplicationController
-  def index
-    @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
+  before_action :authenticate_user!
+
+  load_and_authorize_resource
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: 'Post was successfully deleted.'
   end
+
+  def index; end
 
   def new
     @user = self
@@ -25,11 +32,7 @@ class PostsController < ApplicationController
         format.html { render :new }
       end
     end
-  end
 
-  private
-
-  def post_params
-    params.require(:post).permit(:title, :text)
+    private
   end
 end

@@ -7,6 +7,12 @@ class LikesController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
+    existing_like = Like.find_by(post: @post, author: current_user)
+
+    return unless existing_like
+
+    flash[:alert] = 'You have already liked this post.'
+
     @like = @current_user.likes.new(post_id: @post.id)
 
     respond_to do |format|
