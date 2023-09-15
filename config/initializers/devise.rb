@@ -18,7 +18,6 @@ Devise.setup do |config|
 
 
   # Enable password reset
-  config.reset_password_keys = [:email]
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'

@@ -8,9 +8,7 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: 'Post was successfully deleted.'
   end
 
-  def index
-    @posts = User.includes(:posts, :comments).find_by(id: params['user_id'])
-  end
+  def index; end
 
   def new
     @user = self
